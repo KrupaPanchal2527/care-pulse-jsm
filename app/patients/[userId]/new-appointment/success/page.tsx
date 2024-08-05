@@ -40,7 +40,7 @@ const Success = async ({
             Your <span className="text-green-500">appointment request</span> has
             been successfully submitted.
           </h2>
-          <p>We'll be in touch shortly to confirm.</p>
+          <p>We&apos;ll be in touch shortly to confirm.</p>
         </section>
         <section className="request-details">
           <p>Requested appointment details:</p>
