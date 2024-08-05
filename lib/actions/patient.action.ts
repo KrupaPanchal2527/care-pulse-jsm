@@ -6,6 +6,7 @@ import {
   DATABASE_ID,
   databases,
   ENDPOINT,
+  messaging,
   PATIENT_COLLECTION_ID,
   PROJECT_ID,
   storage,
@@ -86,3 +87,17 @@ export const registerPatient = async ({
   }
 };
 
+export const sendSMSNotification = async (userId: string, content: string) => {
+  try {
+    const message = await messaging.createSms(
+      ID.unique(),
+      content,
+      [],
+      [userId]
+    );
+
+    return parseStringify(message);
+  } catch (err) {
+    console.error(err);
+  }
+};
